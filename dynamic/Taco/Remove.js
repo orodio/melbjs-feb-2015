@@ -21,8 +21,8 @@ export default React.createClass({
   },
 
   click(e) {
-    // e.preventDefault();
-    // actions.del(this.props.id);
+    e.preventDefault();
+    actions.del(this.props.id);
   }
 });
 

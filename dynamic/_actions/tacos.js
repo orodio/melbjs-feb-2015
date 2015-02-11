@@ -19,18 +19,18 @@ function poll()  {
 }
 
 function del(id) {
-  // delTaco(id)
-  //   .then(updateTacos)
+  delTaco(id)
+    .then(updateTacos)
 }
 
 function inc(id) {
-  // incTaco(id)
-    // .then(updateTaco)
+  incTaco(id)
+    .then(updateTaco)
 }
 
 function dec(id) {
-  // decTaco(id)
-  //   .then(updateTaco)
+  decTaco(id)
+    .then(updateTaco)
 }
 
 function create(title) {
@@ -42,7 +42,3 @@ function create(title) {
 
 
 export default { poll, inc, dec, del, create };
-
-
-
-function consRes(res) { console.log(JSON.parse(res.text)); }

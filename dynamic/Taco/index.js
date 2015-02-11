@@ -22,19 +22,15 @@ export default React.createClass({
   },
 
   render() {
-    let {title, count, id} = this.props;
+    let {title,count, id} = this.props;
 
     return <div className="Taco">
+      <Remove id={id}/>
       <Title title={title}/>
+      <Dec id={id}/>
+      <Count count={count}/>
+      <Inc id={id}/>
     </div>
-
-    // return <div className="Taco">
-    //   <Remove id={id}/>
-    //   <Title title={title}/>
-    //   <Dec id={id}/>
-    //   <Count count={count}/>
-    //   <Inc id={id}/>
-    // </div>
   }
 });
 

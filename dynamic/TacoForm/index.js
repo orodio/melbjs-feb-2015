@@ -27,7 +27,7 @@ export default React.createClass({
   render() {
     let {title, validTitle} = this.state;
 
-    return <form onSubmit={this.submite} className="TacoForm">
+    return <form onSubmit={this.submit} className="TacoForm">
       <input value={title} onChange={this.changeTitle} className="TacoForm_input"/>
       {validTitle && <button onClick={this.submit} className="TacoForm_action">
         <i className="fa fa-plus"/>
