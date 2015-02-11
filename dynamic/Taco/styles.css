@@ -1,0 +1,27 @@
+.Taco
+  display        : flex
+  flex-direction : row
+  align-items    : center
+  font-size      : 13px
+  padding        : 5px 0
+  line-height    : 16px
+  box-sizing     : border-box
+  transition     : all 500ms ease
+
+.Taco_title
+  flex: 1
+
+.Taco_title, .Taco_count
+  padding: 0 5px
+
+.Taco_action
+  border     : none
+  background : none
+  cursor     : pointer
+  color      : currentColor
+
+  &:hover, &:focus
+    color: tomato
+
+  &:active
+    transform: translateY(1px)

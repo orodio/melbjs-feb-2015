@@ -1,0 +1,19 @@
+*
+  margin  : 0
+  padding : 0
+  outline : none
+  border  : none
+
+
+body
+  font-family    : raleway,helvetica
+  font-weight    : 200
+  letter-spacing : 0.016em
+  font-size      : 13px
+  padding        : 13px
+  color          : rgba(0,0,25,0.75)
+
+
+.App
+  max-width : 300px
+  margin    : 30px auto

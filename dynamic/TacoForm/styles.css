@@ -1,0 +1,34 @@
+.TacoForm
+  display        : flex
+  margin         : 13px -5px
+
+
+.TacoForm_input
+  flex           : 1
+  border         : none
+  background     : rgba(0,0,25,0.75)
+  font-size      : 13px
+  font-family    : raleway,helvetica
+  font-weight    : 200
+  letter-spacing : 0.016em
+  line-height    : 13px
+  padding        : 5px
+  outline        : none
+  color          : white
+
+
+.TacoForm_action
+  background  : rgba(0,0,25,0.75)
+  font-size   : 13px
+  line-height : 13px
+  border      : none
+  outline     : none
+  color       : white
+  padding     : 5px
+  cursor      : pointer
+
+  &:hover, &:focus
+    background: tomato
+
+  &:active
+    transform: translateY(1px)

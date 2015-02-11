@@ -1,0 +1,12 @@
+.Title
+  font-size : 21px
+  display   : flex
+
+
+.Title_title
+  flex: 1
+
+
+.Title_count
+  margin-left: 21px
+  font-weight: 900
