@@ -1,5 +1,7 @@
 # Melbjs Feb 2015 Demo Application
 
+![Preview](http://i.imgur.com/6nmcigY.png)
+
 *Installing & Running*
 ```
 $ npm install
