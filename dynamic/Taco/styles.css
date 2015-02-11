@@ -7,12 +7,18 @@
   line-height    : 16px
   box-sizing     : border-box
   transition     : all 500ms ease
+  user-select    : none
 
 .Taco_title
   flex: 1
 
 .Taco_title, .Taco_count
   padding: 0 5px
+
+.Taco_count
+  width      : 18px
+  text-align : center
+  cursor     : pointer
 
 .Taco_action
   border     : none

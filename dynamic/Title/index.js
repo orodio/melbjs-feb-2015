@@ -1,5 +1,6 @@
 import "./styles.css"
-import React from "react"
+import React   from "react"
+import actions from "../_actions/tacos"
 
 
 
@@ -15,12 +16,18 @@ export default React.createClass({
   },
 
   render() {
-    let {count} = this.props;
+    let {doubleClick, props} = this;
+    let {count}              = props;
 
-    return <div className="Title">
+    return <div onDoubleClick={doubleClick} className="Title">
       <div className="Title_title">Taco App</div>
       {count > 0 && <div className="Title_count">{count}</div>}
     </div>
+  },
+
+  doubleClick(e) {
+    e.preventDefault();
+    actions.resetCounts();
   }
 });
 

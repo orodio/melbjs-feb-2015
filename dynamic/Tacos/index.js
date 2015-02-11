@@ -1,4 +1,3 @@
-import "./styles.css"
 import React from "react"
 import Taco  from "../Taco"
 

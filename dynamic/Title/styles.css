@@ -4,9 +4,10 @@
 
 
 .Title_title
-  flex: 1
+  flex : 1
 
 
 .Title_count
-  margin-left: 21px
-  font-weight: 900
+  margin-left : 21px
+  font-weight : 900
+  user-select : none

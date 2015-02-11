@@ -1,4 +1,5 @@
-import React from "react"
+import React   from "react"
+import actions from "../_actions/tacos"
 
 
 
@@ -14,10 +15,18 @@ export default React.createClass({
   },
 
   render() {
-    let {count} = this.props;
+    let {doubleClick, props} = this;
+    let {count}              = props;
 
-    return <div className="Taco_count">
-      {count}
-    </div>
+    return <div
+      onDoubleClick={doubleClick}
+      className="Taco_count"
+      title="Double Click Me To Clear Count"
+    >{count}</div>
+  },
+
+  doubleClick(e) {
+    e.preventDefault();
+    actions.resetCount(this.props.id);
   }
 });
