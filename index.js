@@ -32,6 +32,14 @@ app.get("/api/v1/tacos", function(req, res) {
 app.post("/api/v1/tacos", function(req, res) {
   res.json(tacos.createTaco(req.body.title)); });
 
+// delete all the tacos :: DELETE
+app.delete("/api/v1/tacos", function(req, res) {
+  res.json(tacos.resetTacos()); });
+
+// reset the tacos counts to 0 :: DELETE
+app.delete("/api/v1/tacos/count", function(req, res) {
+  res.json(tacos.resetCounts()); });
+
 // inc a taco :: POST [id]
 app.post("/api/v1/taco/inc", function(req, res) {
   res.json(tacos.incTaco(req.body.id)); });
@@ -44,7 +52,9 @@ app.post("/api/v1/taco/dec", function(req, res) {
 app.delete("/api/v1/taco", function(req, res) {
   res.json(tacos.deleteTaco(req.body.id)); });
 
-// app.get("*",  send("index.html"));
-// app.head("*", send("index.html"));
+// reset taco count :: DELETE [id]
+app.delete("/api/v1/taco/count", function(req, res) {
+  res.json(tacos.resetCount(req.body.id)); });
+
 
 app.listen(PORT, console.log.bind(null, "PORT: " + PORT));

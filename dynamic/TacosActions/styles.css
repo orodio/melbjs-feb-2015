@@ -1,0 +1,19 @@
+.TacosActions
+  margin-top      : 13px
+  font-size       : 8px
+  display         : flex
+  justify-content : center
+
+  button
+    font-weight : 200
+    margin      : 0 8px
+    border      : none
+    background  : transparent
+    cursor      : pointer
+    color       : rgba(0,0,25,0.75)
+
+    &:hover, &:focus
+      color : tomato
+
+    &:active
+      transform : translateY(1px)

@@ -19,7 +19,7 @@ export default React.createClass({
 
     return <div className="Title">
       <div className="Title_title">Taco App</div>
-      <div className="Title_count">{count}</div>
+      {count > 0 && <div className="Title_count">{count}</div>}
     </div>
   }
 });

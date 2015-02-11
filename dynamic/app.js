@@ -8,7 +8,7 @@ import subscribe from "dispy/subscribe"
 import Title     from "./Title"
 import TacoForm  from "./TacoForm"
 import Tacos     from "./Tacos"
-
+import Actions   from "./TacosActions"
 
 
 import map    from "lodash/collection/map"
@@ -16,14 +16,14 @@ import reduce from "lodash/collection/reduce"
 
 
 
-import TacoActions from "./_actions/tacos"
-import TacosStore  from "./_stores/tacos"
+import tacoActions from "./_actions/tacos"
+import tacosStore  from "./_stores/tacos"
 
 
 
 function state() {
   return {
-    tacos : TacosStore.getAll(),
+    tacos : tacosStore.getAll(),
   }
 }
 
@@ -32,9 +32,9 @@ function state() {
 let App = React.createClass({
   displayName : "App",
 
-  mixins: [subscribe(state, TacosStore)],
+  mixins: [subscribe(state, tacosStore)],
 
-  componentDidMount() { TacoActions.poll(); },
+  componentDidMount() { tacoActions.poll(); },
 
   render() {
     let {tacos} = this.state;
@@ -46,6 +46,7 @@ let App = React.createClass({
       <Title count={total}/>
       <TacoForm/>
       <Tacos tacos={ts}/>
+      <Actions tacos={ts} total={total}/>
     </div>
   }
 });
